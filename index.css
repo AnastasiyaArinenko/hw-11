@@ -8,7 +8,7 @@
   display: grid;
   margin: 0 auto;
   min-height: 100vh;
-  max-width: 900px;
+  max-width: 1100px;
   grid-template-areas: "head"
                         "main"
                         "footer";
@@ -82,61 +82,96 @@
   transform: rotate(180deg);
 }
 
+.ball-container {
+  height: 200px;
+  position: relative;
+  margin: 40px 25px;
+  
+}
+
 .ball {
   width: 40px;
   height: 40px;
-  margin-top: 40px;
-  margin-left: 15px;
   border-radius: 50%;
   background-color: #7e399e;
+  position: absolute;
+  bottom: 0;
   animation-name: ball;
+  animation-duration: 7s;
   animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+.ball:hover {
   animation-play-state: paused;
 }
+
 
 @keyframes ball {
   0%{
     background-color: #7e399e;
+    bottom: 0;
+    left: 0;
   }
 
-  15%{
+  10%{
     background-color: #54b378;
+    bottom: 100%;
+    left: 10%;
   }
 
-  25% {
+  20% {
     background-color: #ffee00;
+    bottom: 0;
+    left: 20%;
   }
 
-  35%{
+  30%{
     background-color: #ff7b00;
+    bottom: 100%;
+    left: 30%;
   }
 
-  45% {
+  40% {
     background-color: #008cff;
+    bottom: 0;
+    left: 40%;
   }
 
-  55% {
+  50% {
     background-color: #ff00ff;
+    bottom: 100%;
+    left: 50%;
   }
 
-  65%{
+  60%{
     background-color: #00ff9d;
+    bottom: 0;
+    left: 60%;
   }
 
-  75%{
+  70%{
     background-color: #00ffea;
+    bottom: 100%;
+    left: 70%;
   }
 
-  85% {
+  80% {
     background-color: #ff0037;
+    bottom: 0;
+    left: 80%;
   }
 
-  95% {
-    background-color: #ff0000;
+  90% {
+    background-color: #949ae7;
+    bottom: 100%;
+    left: 90%;
   }
 
   100% {
     background-color: #00ff00;
+    bottom: 0;
+    left: 95%;
   }
 }
 
